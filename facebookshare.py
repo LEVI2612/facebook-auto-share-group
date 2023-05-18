@@ -10,9 +10,9 @@ import time
 
 #replace the group that u want to share to 
 
-groups = ['MobileLegends'] #group you can find it by enter the group example : https://facebook.com/groups/********** copy the ******* and replace it in code 
+groups = ['MobileLegends','215858421926082','417986378746621','1275517625932600','1299027166832650','2058923737698685'] #group you can find it by enter the group example : https://facebook.com/groups/********** copy the ******* and replace it in code 
 
-post = 'https://www.facebook.com/photo/?fbid=543961501256999&set=a.534755228844293' #this is the post link u want to post in the group 
+post = 'https://www.facebook.com/photo?fbid=546824187637397&set=a.352316400421511' #this is the post link u want to post in the group 
 #make it dimissed notification
 
 options = webdriver.ChromeOptions()
@@ -49,8 +49,14 @@ for i in range (len(groups)) :
     time.sleep(3)
     group_p.find_element(By.XPATH , "//div[@class='_1mf _1mj']").send_keys(post)
     time.sleep(3)
-    group_p.find_element(By.XPATH , "//div[@aria-label='Post']//div[@class='x1n2onr6 x1ja2u2z x78zum5 x2lah0s xl56j7k x6s0dn4 xozqiw3 x1q0g3np xi112ho x17zwfj4 x585lrc x1403ito x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xn6708d x1ye3gou xtvsq51 x1r1pt67']").click()
+    stt = group_p.find_element(By.XPATH, "//div[@class='_1mf _1mj']")
+    stt.send_keys(Keys.COMMAND+'a')
+    stt.send_keys(Keys.DELETE)
+    time.sleep(1)
+    group_p.find_element(By.XPATH ,"//div[@aria-label='Post']//div[@class='x1n2onr6 x1ja2u2z x78zum5 x2lah0s xl56j7k x6s0dn4 xozqiw3 x1q0g3np xi112ho x17zwfj4 x585lrc x1403ito x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xn6708d x1ye3gou xtvsq51 x1r1pt67']").click()
     time.sleep(5)
+    print('post sucessfully !! ')
+    
 #after it done all your group post it'll close your chrome driver 
 
 #u can set up the time either to make it faster !!!
