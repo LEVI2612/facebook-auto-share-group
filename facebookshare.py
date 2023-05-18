@@ -10,11 +10,11 @@ import time
 
 #replace the group that u want to share to 
 
-groups = ['MobileLegends','215858421926082','417986378746621','1275517625932600','1299027166832650','2058923737698685'] #group you can find it by enter the group example : https://facebook.com/groups/********** copy the ******* and replace it in code 
+groups = [,'215858421926082','417986378746621'] #group you can find it by enter the group example : https://facebook.com/groups/********** copy the ******* and replace it in code 
 
-post = 'https://www.facebook.com/photo?fbid=546824187637397&set=a.352316400421511' #this is the post link u want to post in the group 
+post = '' #insert your post url in ' ************************ ' 
+
 #make it dimissed notification
-
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-notifications")
 driver = webdriver.Chrome("/Users/lychhievtong/Documents/chromedriver_mac_arm64/chromedriver", options=options)
